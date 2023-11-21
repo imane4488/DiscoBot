@@ -1392,7 +1392,7 @@ async def set_xp(ctx, member: discord.Member, xp: int):
                     break
 
     else:
-        await ctx.send('You do not have the permission to manage roles.')
+        await ctx.send('You do not have the permission to manage roles')
 
 
 
