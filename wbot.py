@@ -7,13 +7,12 @@ import random
 import math
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 import io
-import youtube_dl
 import asyncio
 import discord.opus
 from discord.opus import load_opus
 from discord.ext.commands.errors import MemberNotFound
 from discord.ext.commands import BadArgument
-from discord.ext import commands, menus
+from discord.ext import commands
 from discord.ui import View
 from discord.ui.button import Button
 from discord.ui.button import ButtonStyle
@@ -231,7 +230,7 @@ async def guru(ctx, player: discord.Member):
     random.shuffle(shuffled_data)
 
    
-    with open("wlidat.jpeg", "rb") as file:
+    with open("img/wlidat.jpeg", "rb") as file:
         image = discord.File(file)
     
     
@@ -1138,8 +1137,7 @@ async def sounds(ctx):
         SoundButton(label="amongus", sound_path='sounds/amongus.mp3', emoji="🕹️"),
         SoundButton(label="b9a fia", sound_path='sounds/b9afia.mp3', emoji="🤣"),
         SoundButton(label="kedaab", sound_path='sounds/ayb.mp3', emoji="🤨"),
-        
-        
+          
     ]
 
     buttons_group_5 = [
@@ -1147,6 +1145,7 @@ async def sounds(ctx):
         SoundButton(label="Lmonkaar", sound_path='sounds/lahoma hadchi hada monkar.mp3', emoji="😖"),
         SoundButton(label="haayhay", sound_path='sounds/hay hay hay.mp3',emoji="😏"),
         SoundButton(label="Yaak", sound_path='sounds/yakakhoya.mp3', emoji="🔊"),
+        
        
     ]
 
@@ -1155,39 +1154,46 @@ async def sounds(ctx):
         SoundButton(label="la la mabghaytch", sound_path='sounds/mabghaytch.mp3', emoji="🔊"),
         SoundButton(label="b9a fia l7al", sound_path='sounds/b9afia.ogg', emoji="🔊"),
         SoundButton(label="mowgli", sound_path='sounds/mowgli.mp3', emoji="🔊"),
+        
+    ]
+
+    buttons_group_7 = [
+        
         SoundButton(label="Miaaw", sound_path='sounds/MIAW.mp3', emoji="🐱"),
-    ]
-
-    
-
-    buttons_group_3 = [
         SoundButton(label="ghandrb mouk", sound_path='sounds/ghandrbmok.mp3',emoji="🫖"),
-        SoundButton(label="awalan", sound_path='sounds/awalan.mp3',emoji="🤌"),
-        SoundButton(label="wa ta sir ***", sound_path='sounds/wa ta sir t9wed.mp3', emoji="👋"),
-        
+        SoundButton(label="Hero", sound_path='sounds/hero.mp3', emoji="🤨"),
     ]
 
-    buttons_group_4 = [
-        SoundButton(label="wa wlad **", sound_path='sounds/wa wlad 9.mp3',emoji="🖕"),
-        SoundButton(label="wa chouf ldik jih", sound_path='sounds/wa chouf chi chwia ldik jih.mp3', emoji="🦶")
+   # buttons_group_3 = [
+    #    SoundButton(label="ghandrb mouk", sound_path='sounds/ghandrbmok.mp3',emoji="🫖"),
+    #    SoundButton(label="awalan", sound_path='sounds/awalan.mp3',emoji="🤌"),
+     #   SoundButton(label="wa ta sir ***", sound_path='sounds/wa ta sir t9wed.mp3', emoji="👋"),
+        
+   # ]
+
+   # buttons_group_4 = [
+     #   SoundButton(label="wa wlad **", sound_path='sounds/wa wlad 9.mp3',emoji="🖕"),
+      #  SoundButton(label="wa chouf ldik jih", sound_path='sounds/wa chouf chi chwia ldik jih.mp3', emoji="🦶")
         
         
-    ]
+   # ]
 
     view_group_1 = SoundView(buttons_group_1)
     view_group_2 = SoundView(buttons_group_2)
     view_group_5 = SoundView(buttons_group_5)
     view_group_6 = SoundView(buttons_group_6)
-    view_group_3 = SoundView(buttons_group_3)
-    view_group_4 = SoundView(buttons_group_4)
+    view_group_7 = SoundView(buttons_group_7)
+   # view_group_3 = SoundView(buttons_group_3)
+   # view_group_4 = SoundView(buttons_group_4)
 
 
     await ctx.send("Sounds Menu", view=view_group_1)
     await ctx.send("", view=view_group_2)
     await ctx.send("", view=view_group_5)
     await ctx.send("", view=view_group_6)
-    await ctx.send("ataansyou **tkhsar lhedra** ‼️", view=view_group_3)
-    await ctx.send("", view=view_group_4)
+    await ctx.send("", view=view_group_7)
+    #await ctx.send("ataansyou **tkhsar lhedra** ‼️", view=view_group_3)
+   # await ctx.send("", view=view_group_4)
 
 ##############################################################################################################################
 ##############################################################################################################################
